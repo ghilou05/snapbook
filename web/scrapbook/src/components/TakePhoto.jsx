@@ -80,6 +80,10 @@ export async function predict_location(file) {
     });
 
     const user = auth.currentUser;
+    if (!user) {
+      console.error("No authenticated user");
+      return null;
+    }
     const headers = { "Content-Type": "application/json" };
 
     let country_code = null;
@@ -111,49 +115,28 @@ export async function predict_location(file) {
     }
 
     // Send the POST request with the payload as JSON data
-    fetch(url, {
+    try {
+      const response = await fetch(url, {
         method: "POST",
         headers: headers,
         body: JSON.stringify(payload3)
-    })
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error("Request failed with status code: " + response.status);
-        }
-    })
-    .then(result => {
-        console.log(result);
-        addUserLocation(user.uid, result.center_latitude, result.center_longitude)
-        addUserImage(file, result.ai_country)
-        return result;
-    })
-    .catch(error => {
-      fetch(url, {
-          method: "POST",
-          headers: headers,
-          body: JSON.stringify(payload3)
-      })
-      .then(response => {
-          if (response.ok) {
-              return response.json();
-          } else {
-              throw new Error("Request failed with status code: " + response.status);
-          }
-      })
-      .then(result => {
-          console.log(result);
-          addUserLocation(user.uid, result.center_latitude, result.center_longitude)
-          addUserImage(file, result.ai_country)
-          return result;
-      })
-      .catch(error => {
-          console.error("Request failed with error:", error);
-          console.error(response.text);
-          return null;
-      });      
-    });                          
+      });
+      if (!response.ok) {
+        throw new Error("Request failed with status code: " + response.status);
+      }
+      const result = await response.json();
+      console.log(result);
+      if (result.center_latitude != null && result.center_longitude != null) {
+        addUserLocation(user.uid, result.center_latitude, result.center_longitude);
+      }
+      if (result.ai_country != null) {
+        addUserImage(file, result.ai_country);
+      }
+      return result;
+    } catch (error) {
+      console.error("Request failed with error:", error);
+      return null;
+    }
 }
 
 
