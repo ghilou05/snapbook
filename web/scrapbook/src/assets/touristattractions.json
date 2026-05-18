@@ -1,0 +1,22 @@
+{
+  "France": ["Eiffel Tower, Paris", "Louvre Museum, Paris", "Mont Saint-Michel, Normandy"],
+  "Italy": ["Colosseum, Rome", "Leaning Tower of Pisa, Pisa", "Venice Canals, Venice"],
+  "United States": ["Statue of Liberty, New York", "Grand Canyon, Arizona", "Disneyland, California"],
+  "United Kingdom": ["Big Ben, London", "Tower of London, London", "Edinburgh Castle, Edinburgh"],
+  "Japan": ["Fushimi Inari Shrine, Kyoto", "Tokyo Tower, Tokyo", "Kiyomizu-dera Temple, Kyoto"],
+  "Spain": ["Sagrada Familia, Barcelona", "Alhambra, Granada", "Park Güell, Barcelona"],
+  "Germany": ["Brandenburg Gate, Berlin", "Neuschwanstein Castle, Bavaria", "Cologne Cathedral, Cologne"],
+  "Australia": ["Sydney Opera House, Sydney", "Great Barrier Reef, Queensland", "Bondi Beach, Sydney"],
+  "China": ["Great Wall of China, Beijing", "Forbidden City, Beijing", "Terracotta Army, Xi'an"],
+  "Brazil": ["Christ the Redeemer, Rio de Janeiro", "Sugarloaf Mountain, Rio de Janeiro", "Iguaçu Falls, Paraná"],
+  "India": ["Taj Mahal, Agra", "Red Fort, Delhi", "Gateway of India, Mumbai"],
+  "Mexico": ["Chichen Itza, Yucatán", "Teotihuacan, Mexico City", "Cenote Ik Kil, Yucatán"],
+  "Egypt": ["Pyramids of Giza, Giza", "Karnak Temple, Luxor", "Valley of the Kings, Luxor"],
+  "Russia": ["Red Square & Kremlin, Moscow", "Hermitage Museum, St. Petersburg", "Saint Basil's Cathedral, Moscow"],
+  "Thailand": ["Grand Palace, Bangkok", "Phi Phi Islands, Krabi", "Wat Arun, Bangkok"],
+  "Turkey": ["Hagia Sophia, Istanbul", "Cappadocia Hot Air Balloons, Cappadocia", "Topkapi Palace, Istanbul"],
+  "Greece": ["Acropolis of Athens, Athens", "Santorini Caldera, Santorini", "Delphi Archaeological Site, Delphi"],
+  "Netherlands": ["Rijksmuseum, Amsterdam", "Anne Frank House, Amsterdam", "Keukenhof Gardens, Lisse"],
+  "South Africa": ["Table Mountain, Cape Town", "Kruger National Park, Limpopo & Mpumalanga", "Robben Island, Cape Town"],
+  "United Arab Emirates": ["Burj Khalifa, Dubai", "Sheikh Zayed Grand Mosque, Abu Dhabi", "Dubai Mall, Dubai"]
+}
