@@ -9,7 +9,6 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const url = "https://picarta.ai/classify";
 const apiToken = "DAA1ABT95UA253L328Q9";
-const affanToken = "XXY6Z1W8LPZUJFR088O3";
 const ghilesToken = "7WTDSDFQO1F1SFE30GDL";
 
 async function addUserLocation(userID, latitude, longitude) {
