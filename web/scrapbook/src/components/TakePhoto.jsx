@@ -100,16 +100,6 @@ export async function predict_location(file) {
         "RADIUS": radius,
     };
 
-    const payload2 = {
-      "TOKEN": affanToken,
-      "IMAGE": base64,
-      "TOP_K": top_k,
-      "COUNTRY_CODE": country_code,
-      "Center_LATITUDE": center_latitude,
-      "Center_LONGITUDE": center_longitude,
-      "RADIUS": radius,
-  };
-
     const payload3 = {
       "TOKEN": ghilesToken,
       "IMAGE": base64,
@@ -143,7 +133,7 @@ export async function predict_location(file) {
       fetch(url, {
           method: "POST",
           headers: headers,
-          body: JSON.stringify(payload2)
+          body: JSON.stringify(payload3)
       })
       .then(response => {
           if (response.ok) {
