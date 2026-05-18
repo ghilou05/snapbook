@@ -114,7 +114,7 @@ export async function predict_location(file) {
     fetch(url, {
         method: "POST",
         headers: headers,
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload3)
     })
     .then(response => {
         if (response.ok) {
